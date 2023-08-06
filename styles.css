@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
+:root {
+    --primary: #FDFAF1;
+    --secondary: #ECECEC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Noto Sans Thai';
+}
+
+/* check */
+/*
+* {
+    border: 1px solid red;
+}*/
+
+header {
+    width: 80%;
+    height: 70px;
+    background-color: #FDFAF1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+}
+p {
+    font-size: 20px;
+}
+li {
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: #212526;
+    display: block;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
+
+}
+
+nav ul li a:hover {
+    background: #f6f4ff;
+}
+
+body {
+    background: var(--secondary);
+    overflow-x: hidden;
+}
+
+section {
+    margin: 20px 100px 70px 100px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 5em;
+}
+img {
+    width: 500px;
+}
+
+small {
+    font-size: 0.5em;
+}
+
+.item1 {
+    align-self: center;
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 1;
+}
+.item2 {
+    grid-column: 5/9;
+    grid-row: 1;
+}
+.item3 {
+    grid-column: 5/9;
+    grid-row: 1;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+}
+
+#smaller {
+    width: 300px;
+}
+projects li {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+footer {
+    padding: 30px 20px;
+    background-color: var(--primary);
+    background-image: url(assets/footer_image.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+
+
+
+@media only screen and (max-width: 1100px) {
+    header {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    nav {
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #fefefe;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    #nav_check:checked~nav {
+        left: 0;
+    }
+
+    nav .logo {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    nav ul li a {
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+}
